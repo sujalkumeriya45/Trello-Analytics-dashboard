@@ -1,0 +1,26 @@
+member_id,member_name,member_username,email,total_actions,active_days,unique_cards_touched,first_activity,last_activity,cards_created,card_updates,comments,checklist_activity,checklist_completions,assignment_changes,label_changes,attachments_changed,card_moves_detected,top_action_type
+6652d49d8eb17e513be10276,Shreyas Saboo,shreyassaboo4,,851,93,87,2026-02-17T17:38:44.338Z,2026-06-16T17:36:18.173Z,0,835,0,0,0,0,0,0,268,updateCard
+67584c0f84b3a26230086762,Leena Holt,leenaholt,,361,47,43,2026-02-17T18:01:16.651Z,2026-06-15T18:45:56.834Z,7,84,22,158,149,47,0,11,10,updateCheckItemStateOnCard
+5ef4bee672e0b62f1ca2b541,Lindsay Sprague,lindsaysprague1,,185,44,30,2026-02-17T17:38:42.572Z,2026-06-16T14:14:49.102Z,1,77,0,104,104,2,0,0,10,updateCheckItemStateOnCard
+6792a84500c48dd92ae9a5dc,Thomas Hoefer,whoefer,,79,9,14,2026-02-26T16:32:11.369Z,2026-06-02T18:59:07.990Z,0,18,0,59,57,1,0,0,0,updateCheckItemStateOnCard
+6835f180f17cc28b89f0d50f,Will Hall,willrhall,,72,28,7,2026-02-17T17:55:36.136Z,2026-06-15T20:36:47.482Z,0,1,0,68,60,0,0,0,0,updateCheckItemStateOnCard
+685e00dcf6a74037986c011c,Kendra Holaday,kendraholaday,,66,2,6,2026-02-26T16:31:36.958Z,2026-03-04T17:35:51.517Z,0,0,4,61,57,0,0,0,0,updateCheckItemStateOnCard
+67a39e4b5346b7a02581c685,Meg McDougald,mcdougm,,46,15,12,2026-02-20T16:59:39.785Z,2026-06-04T19:11:01.494Z,2,6,2,35,33,0,0,0,0,updateCheckItemStateOnCard
+62fcdd91779acb0e7ddb704b,Dan Stahl,danstahl4,,45,3,10,2026-02-17T18:06:32.996Z,2026-06-09T17:14:19.214Z,2,9,0,21,19,10,0,0,0,updateCheckItemStateOnCard
+6835fdaca55fe7cc232f8bae,Bridget Leslie,bridgetleslie1,,24,9,5,2026-02-20T18:53:32.031Z,2026-06-15T14:40:00.685Z,0,1,0,23,18,0,0,0,0,updateCheckItemStateOnCard
+65ca6cb33c72a8693b4bd7c6,Sarah Bueno,sarahbueno22,,22,8,5,2026-02-17T19:03:42.317Z,2026-06-04T18:38:15.222Z,0,4,0,18,18,0,0,0,0,updateCheckItemStateOnCard
+685d47182a779bb13a6113aa,Gavin Pence,gavinpence,,13,1,5,2026-02-17T19:27:04.627Z,2026-02-17T19:27:47.970Z,0,4,0,9,9,0,0,0,0,updateCheckItemStateOnCard
+69dce49766d08676000c7238,Jared Raskin,jaredraskin,,3,1,0,2026-04-13T18:21:29.457Z,2026-04-13T18:22:22.461Z,0,0,0,0,0,0,0,0,0,updateBoard
+68596d09a63de180c3e1a377,Zachary Pierceson Roberts,zproberts,,2,1,1,2026-04-10T13:42:59.682Z,2026-04-10T13:43:04.698Z,0,0,0,2,2,0,0,0,0,updateCheckItemStateOnCard
+68d2b1161b62e494dec34208,Lauren Coleman,laurencoleman45,,1,1,0,2026-05-26T14:59:14.406Z,2026-05-26T14:59:14.406Z,0,0,0,0,0,0,0,0,0,addMemberToBoard
+68a37fb565e3c7faafb23633,Ben McDougald,benmcdougald1,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+63062b8cdea6ea566d61b16b,Blake Woodward,blakewoodward4,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+68b72b07d61f3b58b50351b4,Hamp Hampton,hamphampton,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+686e8969234cb517c08789ba,Rollins Nix,crnix,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+68a3304687122b12e0daf2c7,Ryan Agcaoili-Mullins,ryanagcaoilimullins,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+68acc1ad63e609083301472b,Ryan Maksim,ryanmaksim,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+5cdaff9b98d9a655849a3ab2,Simone Keller,simonekeller4,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+699c5c1bd0a195be12b5c26b,Stephen Potucek,stephenpotucek1,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+69a6f543018c6832b301b9a8,Taylor Burger,taylorburger1,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+59b938b31ce2d1e385b29212,Tyson Lusk,tslusk1,,0,0,0,,,0,0,0,0,0,0,0,0,0,
+62fcea0321bfdd3480fd3c8a,Wayne Hiott,waynehiott1,,0,0,0,,,0,0,0,0,0,0,0,0,0,
