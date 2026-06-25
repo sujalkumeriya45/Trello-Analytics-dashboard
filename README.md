@@ -3,11 +3,11 @@
 An interactive Streamlit dashboard that transforms raw Trello board export data into visual analytics 
 covering member activity, card performance, and daily trends over a 120-day window.
 
-🔗 **Live App:** https://trello-analytics-dashboard.streamlit.app/
+**Live App:** https://trello-analytics-dashboard.streamlit.app/
 
 ---
 
-## 📊 Dashboard Highlights
+# Dashboard Highlights
 
 - **1,867 actions** tracked across **120 days** (Feb – Jun 2026)
 - **15 active members** out of 25 on the board
@@ -16,7 +16,7 @@ covering member activity, card performance, and daily trends over a 120-day wind
 
 ---
 
-## 🗂️ Dataset
+## Dataset
 
 Five CSV files exported from a Trello Master Board:
 
@@ -30,24 +30,21 @@ Five CSV files exported from a Trello Master Board:
 
 ---
 
-## 🚀 Run Locally
+##  Run Locally
 
-```bash
+# bash
 git clone https://github.com/your-username/trello-analytics-dashboard.git
 cd trello-analytics-dashboard
 pip install -r requirements.txt
 streamlit run app.py
-```
 
----
 
-## 🛠️ Tech Stack
+##  Tech Stack
+Streamlit, Pandas, Plotly, NumPy
 
-`Streamlit` · `Pandas` · `Plotly` · `NumPy`
 
----
 
-## 💡 Key Insights
+# Key Insights
 
 - Activity is **episodic** — 3 days alone account for 17% of all actions
 - **One member drives 45%** of total board activity (851 / 1,867 actions)
@@ -56,11 +53,11 @@ streamlit run app.py
 - **Month-end weeks** are consistently the most active — aligned with finance deadlines
 - **536 checklist completions** are the strongest signal of actual work done
 
----
 
-## 📁 File Structure
 
-```
+# File Structure
+
+
 ├── app.py
 ├── requirements.txt
 ├── README.md
@@ -70,8 +67,5 @@ streamlit run app.py
     ├── trello_member_activity_summary.csv
     ├── trello_daily_activity_summary_in_.csv
     └── trello_card_activity_summary_in_.csv
-```
-
----
 
 *Built with Streamlit · Deployed on Streamlit Community Cloud*
