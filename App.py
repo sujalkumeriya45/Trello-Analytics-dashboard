@@ -251,13 +251,43 @@ if not events_filtered.empty:
 else:
     daily_dynamic = pd.DataFrame(columns=['activity_day', 'total_actions', 'checklist_completions', 'card_moves_detected', 'card_updates'])
 
+
 # Live Metrics Core Logic Calculations
 
 total_actions_calc = len(events_filtered)
-active_cards_calc = len(cards) # Showing global metrics safely now
-active_members_calc = events_filtered["member_name"].nunique() if total_actions_calc > 0 else 0
-total_checklist_calc = int(daily_dynamic["checklist_completions"].sum()) if not daily_dynamic.empty else 0
-total_moves_calc = int(daily_dynamic["card_moves_detected"].sum()) if not daily_dynamic.empty else 0
+
+# Values from Trello Board Snapshot
+total_cards_calc = int(board["card_count"].iloc[0])
+
+active_cards_calc = (
+    events_filtered["card_id"]
+    .dropna()
+    .nunique()
+)
+# Active members based on filters
+active_members_calc = (
+    events_filtered["member_name"].nunique()
+    if total_actions_calc > 0
+    else 0
+)
+
+total_checklist_calc = (
+    int(daily_dynamic["checklist_completions"].sum())
+    if not daily_dynamic.empty
+    else 0
+)
+
+total_checklist_calc = (
+    int(daily_dynamic["checklist_completions"].sum())
+    if not daily_dynamic.empty
+    else 0
+)
+
+total_moves_calc = (
+    int(daily_dynamic["card_moves_detected"].sum())
+    if not daily_dynamic.empty
+    else 0
+)
 
 # Header Section Template
 st.title("📋 Master Board 2026 — Activity Analytics")
@@ -276,11 +306,46 @@ def kpi_card(col, label, value, sub, color):
     """, unsafe_allow_html=True)
 
 kpi_card(col1, "Total Actions", f"{total_actions_calc:,}", "Active range log", "#ff6b6b")
-kpi_card(col2, "Total Cards", f"{active_cards_calc}", "Total Board Cards", "#43d98c")
-kpi_card(col3, "Active Members", f"{active_members_calc}", "Selected users count", "#4ecdc4")
-kpi_card(col4, "Checklist Done", f"{total_checklist_calc:,}", "Completions total", "#f4e06d")
-kpi_card(col5, "Card Moves", f"{total_moves_calc:,}", "Track shifts", "#a78bfa")
-kpi_card(col6, "Total Members", f"{board['member_count'].iloc[0]}", "Registered Board Users", "#43d98c")
+
+kpi_card(
+    col2,
+    "Total Cards",
+    f"{total_cards_calc:,}",
+    "Total Board Cards",
+    "#43d98c"
+)
+
+kpi_card(
+    col3,
+    "Active Cards",
+    f"{active_cards_calc:,}",
+    "Cards touched in filters",
+    "#38BDF8"
+)
+
+kpi_card(
+    col4,
+    "Active Members",
+    f"{active_members_calc}",
+    "Selected users count",
+    "#4ecdc4"
+)
+
+kpi_card(
+    col5,
+    "Checklist Done",
+    f"{total_checklist_calc:,}",
+    "Completions total",
+    "#f4e06d"
+)
+
+kpi_card(
+    col6,
+    "Total Members",
+    f"{board['member_count'].iloc[0]}",
+    "Registered Board Users",
+    "#a78bfa"
+)
 
 # ==================== CHART 1: DAILY ACTIVITY OVER TIME ====================
 
