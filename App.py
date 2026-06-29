@@ -487,14 +487,38 @@ if not events_filtered.empty:
                 "card_moves_detected": len(m_events[m_events["is_card_move"] == "yes"]),
                 "efficiency": round(len(m_events) / max(m_events["activity_day_parsed"].dt.date.nunique(), 1), 1)
             })
-    active_df = pd.DataFrame(leaderboard_list)
-    if not active_df.empty:
-        active_df["share_%"] = round((active_df["total_actions"] / active_df["total_actions"].sum()) * 100, 1)
+if not active_df.empty:
+        total_sum = active_df["total_actions"].sum()
+        active_df["share_%"] = (
+            (active_df["total_actions"] / total_sum * 100)
+            .round(1)
+        )
         active_df = active_df.sort_values("total_actions", ascending=False)
-        st.dataframe(active_df, use_container_width=True, hide_index=True, column_config={"share_%": st.column_config.ProgressColumn("Share %", min_value=0, max_value=100)})
-else:
-    st.info("No active users data matching selection.")
 
+        st.dataframe(
+            active_df[[
+                "member_name", "total_actions", "active_days",
+                "unique_cards_touched", "checklist_completions",
+                "card_moves_detected", "efficiency", "share_%"
+            ]],
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "member_name":           st.column_config.TextColumn("Member"),
+                "total_actions":         st.column_config.NumberColumn("Actions",     format="%d"),
+                "active_days":           st.column_config.NumberColumn("Active Days", format="%d"),
+                "unique_cards_touched":  st.column_config.NumberColumn("Cards",       format="%d"),
+                "checklist_completions": st.column_config.NumberColumn("Checklist ✓", format="%d"),
+                "card_moves_detected":   st.column_config.NumberColumn("Moves",       format="%d"),
+                "efficiency":            st.column_config.NumberColumn("Actions/Day", format="%.1f"),
+                "share_%": st.column_config.ProgressColumn(
+                    "Share %",
+                    min_value=0,
+                    max_value=100,
+                    format="%.1f%%",   # ← THIS fixes 4560% → 45.6%
+                ),
+            }
+        )
 
 # CHART 3: MONTHLY ACTIVITY HEATMAP 
 # Visualizes activity volume by: Month and week of month 
