@@ -35,6 +35,8 @@ Five CSV files exported from a Trello Master Board:
 # bash
 git clone https://github.com/your-username/trello-analytics-dashboard.git
 cd trello-analytics-dashboard
+
+
 pip install -r requirements.txt
 streamlit run app.py
 
